@@ -1,0 +1,2 @@
+# ScrollViewAndRecyclerView
+ScrollView嵌套RecyclerView，实现recycleview加载全部数据，只让ScrollView滑动
