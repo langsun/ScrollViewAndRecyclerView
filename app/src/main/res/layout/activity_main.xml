@@ -1,24 +1,11 @@
-# ScrollViewAndRecyclerView
-ScrollView嵌套RecyclerView，实现recycleview加载全部数据，只让ScrollView滑动，实现一个长屏功能
-### 核心代码
-Java代码
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sun.myrecycleview.MainActivity">
 
-	  mRecycleView.setLayoutManager(new LinearLayoutManager(this) {
-            @Override
-            public boolean canScrollVertically() {
-                //解决ScrollView里存在多个RecyclerView时滑动卡顿的问题
-                // 如果你的RecyclerView是水平滑动的话可以重写canScrollHorizontally方法
-                return false;
-            }
-        });
-        //解决数据加载不完的问题
-        mRecycleView.setNestedScrollingEnabled(false);
-        mRecycleView.setHasFixedSize(true);
-        // 解决数据加载完成后, 没有停留在顶部的问题
-        mRecycleView.setFocusable(false);
- xxx.Xml代码  NestedScrollView
- 
-     <android.support.v4.widget.NestedScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -63,3 +50,6 @@ Java代码
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
